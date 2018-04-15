@@ -99,20 +99,24 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="栈需要声明的方法 push(element(s))：添加一个（或几个）新元素到栈顶。 pop()：移除栈顶的元素，同时返回被移除的元素。 peek()：返回栈顶的元素，不对栈做任何修改（这个方法不会移除栈顶的元素，仅仅返回它）。 isEmpty()：如果栈里没有任何元素就返回true，否则返回false。 clear()：移除栈里的所有元素。 size()：返回栈里的元素个数。这个方法和数组的le">
+<meta property="og:type" content="article">
 <meta property="og:title" content="ZBTT">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/04/14/Javascript栈应用/index.html">
 <meta property="og:site_name" content="ZBTT">
+<meta property="og:description" content="栈需要声明的方法 push(element(s))：添加一个（或几个）新元素到栈顶。 pop()：移除栈顶的元素，同时返回被移除的元素。 peek()：返回栈顶的元素，不对栈做任何修改（这个方法不会移除栈顶的元素，仅仅返回它）。 isEmpty()：如果栈里没有任何元素就返回true，否则返回false。 clear()：移除栈里的所有元素。 size()：返回栈里的元素个数。这个方法和数组的le">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-14T11:44:04.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZBTT">
+<meta name="twitter:description" content="栈需要声明的方法 push(element(s))：添加一个（或几个）新元素到栈顶。 pop()：移除栈顶的元素，同时返回被移除的元素。 peek()：返回栈顶的元素，不对栈做任何修改（这个方法不会移除栈顶的元素，仅仅返回它）。 isEmpty()：如果栈里没有任何元素就返回true，否则返回false。 clear()：移除栈里的所有元素。 size()：返回栈里的元素个数。这个方法和数组的le">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/14/Javascript栈应用/"/>
 
 
 
@@ -122,7 +126,7 @@
   };
 </script>
 
-  <title>ZBTT</title>
+  <title> | ZBTT</title>
   
 
 
@@ -169,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,7 +213,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
@@ -254,9 +257,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -289,10 +292,6 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/14/Javascript栈应用/" itemprop="url">
-                  Untitled
-                </a>
               
             
           </h1>
@@ -348,9 +347,7 @@
       
 
       
-        
-          
-            <h1 id="栈需要声明的方法"><a href="#栈需要声明的方法" class="headerlink" title="栈需要声明的方法"></a>栈需要声明的方法</h1><ol>
+        <h1 id="栈需要声明的方法"><a href="#栈需要声明的方法" class="headerlink" title="栈需要声明的方法"></a>栈需要声明的方法</h1><ol>
 <li>push(element(s))：添加一个（或几个）新元素到栈顶。</li>
 <li>pop()：移除栈顶的元素，同时返回被移除的元素。</li>
 <li>peek()：返回栈顶的元素，不对栈做任何修改（这个方法不会移除栈顶的元素，仅仅返回它）。</li>
@@ -398,8 +395,6 @@ return binary;｝
 </li>
 </ol>
 
-          
-        
       
     </div>
 
@@ -419,12 +414,12 @@ return binary;｝
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -434,14 +429,19 @@ return binary;｝
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -462,8 +462,17 @@ return binary;｝
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -508,6 +517,22 @@ return binary;｝
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#栈需要声明的方法"><span class="nav-number">1.</span> <span class="nav-text">栈需要声明的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈的实现"><span class="nav-number">2.</span> <span class="nav-text">栈的实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈应用"><span class="nav-number">3.</span> <span class="nav-text">栈应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#十进制转二进制"><span class="nav-number">3.1.</span> <span class="nav-text">十进制转二进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡括号"><span class="nav-number">3.2.</span> <span class="nav-text">平衡括号</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -635,6 +660,10 @@ return binary;｝
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
+
+
 
   
 
