@@ -99,25 +99,25 @@
 
 
 
-  <meta name="description" content="接收参数区别 slice和substring接收起始位置和结束位置（可选，不包括结束位置），返回子字符串。  substr接收起始位置和所要返回的字符串长度（可选），返回子字符串。   var test = &amp;#39;hello world&amp;#39;;alert(test.slice(4,7));             //o walert(test.substring(4,7));">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="typeoftypeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。 注意点:  typeof null -&amp;gt;”object”  typeof 数组 -&amp;gt;”object”  instanceofinstanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="slice、substr、substring的区别">
-<meta property="og:url" content="http://yoursite.com/2018/04/16/slice、substr、substring的区别/index.html">
+<meta property="og:title" content="类型检测">
+<meta property="og:url" content="http://yoursite.com/2018/04/18/类型检测/index.html">
 <meta property="og:site_name" content="ZBTT">
-<meta property="og:description" content="接收参数区别 slice和substring接收起始位置和结束位置（可选，不包括结束位置），返回子字符串。  substr接收起始位置和所要返回的字符串长度（可选），返回子字符串。   var test = &amp;#39;hello world&amp;#39;;alert(test.slice(4,7));             //o walert(test.substring(4,7));">
+<meta property="og:description" content="typeoftypeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。 注意点:  typeof null -&amp;gt;”object”  typeof 数组 -&amp;gt;”object”  instanceofinstanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T09:31:26.794Z">
+<meta property="og:updated_time" content="2018-04-18T05:54:36.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="slice、substr、substring的区别">
-<meta name="twitter:description" content="接收参数区别 slice和substring接收起始位置和结束位置（可选，不包括结束位置），返回子字符串。  substr接收起始位置和所要返回的字符串长度（可选），返回子字符串。   var test = &amp;#39;hello world&amp;#39;;alert(test.slice(4,7));             //o walert(test.substring(4,7));">
+<meta name="twitter:title" content="类型检测">
+<meta name="twitter:description" content="typeoftypeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。 注意点:  typeof null -&amp;gt;”object”  typeof 数组 -&amp;gt;”object”  instanceofinstanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/16/slice、substr、substring的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/18/类型检测/"/>
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>slice、substr、substring的区别 | ZBTT</title>
+  <title>类型检测 | ZBTT</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/slice、substr、substring的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/类型检测/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">slice、substr、substring的区别
+          <h1 class="post-title" itemprop="name headline">类型检测
               
             
           </h1>
@@ -311,7 +311,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T16:58:19+08:00">2018-04-16</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T13:14:33+08:00">2018-04-18</time>
             
 
             
@@ -348,21 +348,14 @@
       
 
       
-        <h1 id="接收参数区别"><a href="#接收参数区别" class="headerlink" title="接收参数区别"></a>接收参数区别</h1><ul>
-<li><p>slice和substring接收起始位置和结束位置（可选，不包括结束位置），返回子字符串。</p>
-</li>
-<li><p>substr接收起始位置和所要返回的字符串长度（可选），返回子字符串。</p>
-</li>
-</ul>
-<p><code>var test = &#39;hello world&#39;;</code><br><code>alert(test.slice(4,7));             //o w</code><br><code>alert(test.substring(4,7));         //o w</code><br><code>alert(test.substr(4,7));            //o world</code></p>
-<h1 id="负参处理"><a href="#负参处理" class="headerlink" title="负参处理"></a>负参处理</h1><ul>
-<li><p>slice会将字符串长度与负参相加的结果作为参数。  </p>
-</li>
-<li><p>substring将负参直接转换为0，当第一个参数大于第二个参数时，默认选取较小的作为起始位置。</p>
-</li>
-<li><p>substr仅将第一个负参与字符串长度相加。<br> <code>var test = &#39;hello world&#39;;</code><br><code>alert(test.slice(-3));         //rld</code><br><code>alert(test.substring(-3));     //hello world</code><br><code>alert(test.substr(-3));        //rld</code><br><code>alert(test.slice(3,-4));       //lo w</code><br><code>alert(test.substring(3,-4));   //hel</code><br><code>alert(test.substr(3,-4));      //空字符串</code></p>
-</li>
-</ul>
+        <h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h1><p>typeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。<br></p>
+<p><font color="red">注意点:</font><br></p>
+<p><ul></ul></p>
+<p><li>typeof null -&gt;”object” </li></p>
+<p><li>typeof 数组 -&gt;”object” </li><br></p>
+<h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h1><p>instanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中可以找到），在不同iframe和window间检测时失效。</p>
+<h1 id="Object-protptype-toString-apply"><a href="#Object-protptype-toString-apply" class="headerlink" title="Object.protptype.toString.apply()"></a>Object.protptype.toString.apply()</h1><p>适合内置对象和基本类型，返回JSON字符串，遇到null和defined失效</p>
+<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h1><p>指向构造函数</p>
 
       
     </div>
@@ -383,7 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
           
         </div>
       
@@ -396,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/15/Javascript栈应用/" rel="next" title="Javascript栈应用">
-                <i class="fa fa-chevron-left"></i> Javascript栈应用
+              <a href="/2018/04/16/slice、substr、substring的区别/" rel="next" title="slice、substr、substring的区别">
+                <i class="fa fa-chevron-left"></i> slice、substr、substring的区别
               </a>
             
           </div>
@@ -405,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/18/类型检测/" rel="prev" title="类型检测">
-                类型检测 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#接收参数区别"><span class="nav-number">1.</span> <span class="nav-text">接收参数区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#负参处理"><span class="nav-number">2.</span> <span class="nav-text">负参处理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#typeof"><span class="nav-number">1.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#instanceof"><span class="nav-number">2.</span> <span class="nav-text">instanceof</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-protptype-toString-apply"><span class="nav-number">3.</span> <span class="nav-text">Object.protptype.toString.apply()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">4.</span> <span class="nav-text">constructor</span></a></li></ol></div>
             
 
           </div>
