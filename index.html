@@ -212,7 +212,7 @@
           
           <li class="menu-item menu-item-home menu-item-active">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
         
@@ -220,7 +220,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
   </li>
 
       
@@ -255,6 +255,178 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZBTT">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/23/CSS-float和position：absolute脱离文档流区别/" itemprop="url">
+                  CSS-float和position：absolute脱离文档流区别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+                
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-23T15:56:54+08:00">2018-04-23</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h1><pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;无标题文档&lt;/title&gt;
+&lt;style&gt;
+#outofnormal {
+width: 200px;
+background-color: cyan;
+padding: 10px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id=&quot;outofnormal&quot;&gt;
+    Out of normal: 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi esse impedit autem praesentium magni culpa, amet corporis, veniam consequatur voluptates temporibus. Voluptates eius similique asperiores cupiditate fugit hic atque quisquam?
+&lt;/div&gt;
+&lt;h2&gt;Normal Content&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum praesentium nam tempora beatae quis nobis laboriosam alias aliquid, tenetur exercitationem. Odio, aperiam, illo! Eveniet natus dignissimos architecto velit eligendi id!&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit velit nam delectus distinctio at unde aliquid officia illo, tempore vitae et incidunt non, ut eos nesciunt quaerat. Enim, minus.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="images/03.png" alt="avatar"></p>
+<h1 id="蓝色背景盒子增加float-left"><a href="#蓝色背景盒子增加float-left" class="headerlink" title="蓝色背景盒子增加float:left"></a>蓝色背景盒子增加float:left</h1><pre><code>#outofnormal {
+width: 200px;
+background-color: cyan;
+padding: 10px;
+float: left;
+}
+</code></pre><h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><p><img src="images/02.png" alt="avatar"><br>浮动之后，蓝色的div就脱离了文档流，跟在后面的h2和p的盒子都当做没看到这个div的样子去定位，所以他们都顶着浏览器左边和顶部的边框。但是有趣的是，h2和p里面的文本，却都看到了这个被float的div，在自己的盒子里往右推，飘到了蓝色div的边上。这就是float的特性，其他盒子看不见被float的元素，但是其他盒子里的文本看得见。</p>
+<h1 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h1><pre><code>#outofnormal {
+width: 200px;
+background-color: cyan;
+padding: 10px;
+position:absolute;
+}
+</code></pre><h2 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h2><p><img src="images/04.png" alt="avatar"><br>设置了绝对定位后，不仅是旁边的其他盒子无视蓝色div的存在，连盒子里的文本也无视了蓝色div的存在</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -309,7 +481,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-23T14:57:08+08:00">2018-04-23</time>
             
@@ -443,7 +615,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T13:14:33+08:00">2018-04-18</time>
             
@@ -583,7 +755,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T16:58:19+08:00">2018-04-16</time>
             
@@ -730,7 +902,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T10:39:29+08:00">2018-04-15</time>
             
@@ -899,8 +1071,8 @@ return binary;｝
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -925,7 +1097,7 @@ return binary;｝
                       
                     
                     <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">Tags</span>
+                    <span class="site-state-item-name">tags</span>
                   
                 </div>
               
@@ -978,7 +1150,7 @@ return binary;｝
 
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 

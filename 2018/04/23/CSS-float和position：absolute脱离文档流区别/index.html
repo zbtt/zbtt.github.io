@@ -99,25 +99,29 @@
 
 
 
-  <meta name="description" content="typeoftypeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。 注意点:  typeof null -&amp;gt;”object”  typeof 数组 -&amp;gt;”object”  instanceofinstanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中">
-<meta name="keywords" content="JS">
+  <meta name="description" content="标准文档流&amp;lt;!doctype html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;无标题文档&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; #outofnormal { width: 200px; background-color: cyan; padding:">
+<meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="类型检测">
-<meta property="og:url" content="http://yoursite.com/2018/04/18/类型检测/index.html">
+<meta property="og:title" content="CSS-float和position：absolute脱离文档流区别">
+<meta property="og:url" content="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/index.html">
 <meta property="og:site_name" content="ZBTT">
-<meta property="og:description" content="typeoftypeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。 注意点:  typeof null -&amp;gt;”object”  typeof 数组 -&amp;gt;”object”  instanceofinstanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中">
+<meta property="og:description" content="标准文档流&amp;lt;!doctype html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;无标题文档&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; #outofnormal { width: 200px; background-color: cyan; padding:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-18T06:20:04.261Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/images/03.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/images/02.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/images/04.png">
+<meta property="og:updated_time" content="2018-04-23T09:13:54.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="类型检测">
-<meta name="twitter:description" content="typeoftypeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。 注意点:  typeof null -&amp;gt;”object”  typeof 数组 -&amp;gt;”object”  instanceofinstanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中">
+<meta name="twitter:title" content="CSS-float和position：absolute脱离文档流区别">
+<meta name="twitter:description" content="标准文档流&amp;lt;!doctype html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;无标题文档&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; #outofnormal { width: 200px; background-color: cyan; padding:">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/images/03.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/18/类型检测/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/"/>
 
 
 
@@ -127,7 +131,7 @@
   };
 </script>
 
-  <title>类型检测 | ZBTT</title>
+  <title>CSS-float和position：absolute脱离文档流区别 | ZBTT</title>
   
 
 
@@ -275,7 +279,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/类型检测/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/CSS-float和position：absolute脱离文档流区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -292,7 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">类型检测
+          <h1 class="post-title" itemprop="name headline">CSS-float和position：absolute脱离文档流区别
               
             
           </h1>
@@ -311,7 +315,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T13:14:33+08:00">2018-04-18</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-23T15:56:54+08:00">2018-04-23</time>
             
 
             
@@ -348,14 +352,46 @@
       
 
       
-        <h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h1><p>typeof返回一个对应数据类型的字符串，只能为为“number”、“string”、“boolean”、“object”、“function”、“undefined”其中一个。<br></p>
-<p><font color="red">注意点:</font><br></p>
-<p><ul></ul></p>
-<p><li>typeof null -&gt;”object” </li></p>
-<p><li>typeof 数组 -&gt;”object” </li><br></p>
-<h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h1><p>instanceof适合自定义对象，也可以用来检测原生对象（凡是原型链中可以找到），在不同iframe和window间检测时失效。</p>
-<h1 id="Object-protptype-toString-apply"><a href="#Object-protptype-toString-apply" class="headerlink" title="Object.protptype.toString.apply()"></a>Object.protptype.toString.apply()</h1><p>适合内置对象和基本类型，返回JSON字符串，遇到null和undefined失效</p>
-<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h1><p>指向构造函数</p>
+        <h1 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h1><pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;无标题文档&lt;/title&gt;
+&lt;style&gt;
+#outofnormal {
+width: 200px;
+background-color: cyan;
+padding: 10px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div id=&quot;outofnormal&quot;&gt;
+    Out of normal: 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi esse impedit autem praesentium magni culpa, amet corporis, veniam consequatur voluptates temporibus. Voluptates eius similique asperiores cupiditate fugit hic atque quisquam?
+&lt;/div&gt;
+&lt;h2&gt;Normal Content&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum praesentium nam tempora beatae quis nobis laboriosam alias aliquid, tenetur exercitationem. Odio, aperiam, illo! Eveniet natus dignissimos architecto velit eligendi id!&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit velit nam delectus distinctio at unde aliquid officia illo, tempore vitae et incidunt non, ut eos nesciunt quaerat. Enim, minus.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="images/03.png" alt="avatar"></p>
+<h1 id="蓝色背景盒子增加float-left"><a href="#蓝色背景盒子增加float-left" class="headerlink" title="蓝色背景盒子增加float:left"></a>蓝色背景盒子增加float:left</h1><pre><code>#outofnormal {
+width: 200px;
+background-color: cyan;
+padding: 10px;
+float: left;
+}
+</code></pre><h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><p><img src="images/02.png" alt="avatar"><br>浮动之后，蓝色的div就脱离了文档流，跟在后面的h2和p的盒子都当做没看到这个div的样子去定位，所以他们都顶着浏览器左边和顶部的边框。但是有趣的是，h2和p里面的文本，却都看到了这个被float的div，在自己的盒子里往右推，飘到了蓝色div的边上。这就是float的特性，其他盒子看不见被float的元素，但是其他盒子里的文本看得见。</p>
+<h1 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h1><pre><code>#outofnormal {
+width: 200px;
+background-color: cyan;
+padding: 10px;
+position:absolute;
+}
+</code></pre><h2 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h2><p><img src="images/04.png" alt="avatar"><br>设置了绝对定位后，不仅是旁边的其他盒子无视蓝色div的存在，连盒子里的文本也无视了蓝色div的存在</p>
 
       
     </div>
@@ -376,7 +412,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JS/" rel="tag"># JS</a>
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
           
         </div>
       
@@ -389,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/16/slice、substr、substring的区别/" rel="next" title="slice、substr、substring的区别">
-                <i class="fa fa-chevron-left"></i> slice、substr、substring的区别
+              <a href="/2018/04/23/CSS-替换元素和非替换元素/" rel="next" title="CSS-替换元素和非替换元素">
+                <i class="fa fa-chevron-left"></i> CSS-替换元素和非替换元素
               </a>
             
           </div>
@@ -398,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/23/CSS-替换元素和非替换元素/" rel="prev" title="CSS-替换元素和非替换元素">
-                CSS-替换元素和非替换元素 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -536,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#typeof"><span class="nav-number">1.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#instanceof"><span class="nav-number">2.</span> <span class="nav-text">instanceof</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-protptype-toString-apply"><span class="nav-number">3.</span> <span class="nav-text">Object.protptype.toString.apply()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">4.</span> <span class="nav-text">constructor</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标准文档流"><span class="nav-number">1.</span> <span class="nav-text">标准文档流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">1.1.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#蓝色背景盒子增加float-left"><span class="nav-number">2.</span> <span class="nav-text">蓝色背景盒子增加float:left</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果-1"><span class="nav-number">2.1.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绝对定位"><span class="nav-number">3.</span> <span class="nav-text">绝对定位</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果-2"><span class="nav-number">3.1.</span> <span class="nav-text">效果</span></a></li></ol></li></ol></div>
             
 
           </div>
